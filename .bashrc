@@ -1,156 +1,62 @@
-#
-# ~/.bashrc
-#
+#bashrc - this file runs every time a bash terminal opens and is used for comfy settings
 
-# MOST OF THIS COMES FROM THE MANJARO XFCE DEFAULTS. I LIKED THEM, SO I STOLE THEM #
-
-#[[ $- != *i* ]] && return
-
-#colors() {
-#	local fgc bgc vals seq0
-#
-#	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-#	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-#	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-#	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
-#
-#	# foreground colors
-#	for fgc in {30..37}; do
-#		# background colors
-#		for bgc in {40..47}; do
-#			fgc=${fgc#37} # white
-#			bgc=${bgc#40} # black
-#
-#			vals="${fgc:+$fgc;}${bgc}"
-#			vals=${vals%%;}
-#
-#			seq0="${vals:+\e[${vals}m}"
-#			printf "  %-9s" "${seq0:-(default)}"
-#			printf " ${seq0}TEXT\e[m"
-#			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-#		done
-#		echo; echo
-#	done
-#}
-
-#[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-
-# Change the window title of X terminals
-#case ${TERM} in
-#	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-#		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-#		;;
-#	screen*)
-#		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-#		;;
-#esac
-
-use_color=true
-
-# Set colorful PS1 only on colorful terminals.
-# dircolors --print-database uses its own built-in database
-# instead of using /etc/DIR_COLORS.  Try to use the external file
-# first to take advantage of user additions.  Use internal bash
-# globbing instead of external grep binary.
-#safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
-#match_lhs=""
-#[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
-#[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-#[[ -z ${match_lhs}    ]] \
-#	&& type -P dircolors >/dev/null \
-#	&& match_lhs=$(dircolors --print-database)
-#[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
-
-if ${use_color} ; then
-	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-#	if type -P dircolors >/dev/null ; then
-#		if [[ -f ~/.dir_colors ]] ; then
-#			eval $(dircolors -b ~/.dir_colors)
-#		elif [[ -f /etc/DIR_COLORS ]] ; then
-#			eval $(dircolors -b /etc/DIR_COLORS)
-#		fi
-#	fi
-
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
-	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-	fi
-
-	alias ls='ls --color=auto --group-directories-first'
-	alias grep='grep --colour=auto'
-#	alias egrep='egrep --colour=auto'
-#	alias fgrep='fgrep --colour=auto'
-	alias ccat='highlight --out-format=ansi'
-
-#else
-#	if [[ ${EUID} == 0 ]] ; then
-		# show root@ when we don't have colors
-#		PS1='\u@\h \W \$ '
-#	else
-#		PS1='\u@\h \w \$ '
-#	fi
+#I'm certainly no PS1 expert, but this is the Manjaro Xfce default. It looks like [user@host dir]$
+if [[ ${EUID} == 0 ]] ; then
+	PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+else
+	PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 fi
 
-unset use_color #safe_term match_lhs sh
+#Infinite bash history file. I can always delete it to start from the bottom again. Which, honestly, I will do frequently
+HISTSIZE= HISTFILESIZE =
 
-alias cp="cp -i"			# confirm before overwriting something
-#alias df='df -h'			# human-readable sizes
-alias free='free -m'		# show sizes in MiB
+#Shell options
+shopt -s expand_aliases	#When is alias is identified, replace it with its full value. This allows for stacking aliases (seen below)
+shopt -s histappend		#Append history file, rather than overwriting. Works magic with the infinite length file (seen above)
+shopt -s autocd			#Enter a directory just by naming it (à la zsh)
 
-#xhost +local:root > /dev/null 2>&1
-
-#complete -cf sudo
-
-# Bash won't get SIGWINCH if another process is in the foreground.
-# Enable checkwinsize so that bash will check the terminal size when
-# it regains control.  #65623
-# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
-#shopt -s checkwinsize
-
-shopt -s expand_aliases
-
-# Enable history appending instead of overwriting.  #139609
-shopt -s histappend
-
-# use vim, not nano, by default
+#Set default terminal-based text editor to vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# little shortcuts for me
+#Small, time-saving shortcuts in no particular order
+alias 'ls'='ls --color=auto --group-directories-first'	#Always use colors and list directories before files
 alias la='ls -Al'
 alias lA='ls -A'
 alias ll='ls -l'
 alias lb='lsblk -o name,size,fstype,mountpoint'
-alias please='sudo $(history -p !!)'
-alias update='sudo xbps-install -Suv'
-alias clear='sudo xbps-remove -o'
+alias 'grep'='grep --colour=auto'						#Always use colors
+alias mkd='mkdir -pv'									#The p option means to make any parent directories if nonexistent (helpful for quickly generating a tree), and the v option gives a verbose response (just in case something goes wrong)
+alias 'cp'="cp -i"										#Confirm before overwriting something
+alias 'free'='free -m'									#Show sizes in MiB
+alias xi='sudo xbps-install'
+alias xr='sudo xbps-remove'
+alias xq='xbps-query'
+alias sta='git status'
+alias dif='git diff'
+alias log='git log'
+alias please='sudo $(history -p !!)'					#Automagic sudo of previous line. Why does it work? I dunno
 
-mkcd () {
-	mkdir $1;
+#Functions for easier git maneuvers
+acp() {
+	git add .;
+	git commit;
+	git push;
+}
+
+acpp() {
+	git add .;
+	git commit;
+	git pull;
+	git push;
+}
+
+#Make a directory ans enter it
+#Usage: mkcd [name]
+mkcd() {
+	mkd $1;
 	cd $1;
 }
 
-# file selection thing
-alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/newfile'
-
-# git shortcuts
-alias 'sta'='git status'
-alias 'dif'='git diff'
-alias 'log'='git log'
-
-# auto-enter dir
-shopt -s autocd
-
-function acp() {
-	git add . && git commit && git push
-}
-
-function acpp() {
-	git add . && git commit && git pull && git push
-}
-
-function cpp() {
-	git commit && git pull && git push
-}
-
+#Don't ask why this is here. Just ignore it
+#alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/newfile'

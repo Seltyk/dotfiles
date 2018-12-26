@@ -51,7 +51,7 @@ acpp() {
 	git push;
 }
 
-#Make a directory ans enter it
+#Make a directory and enter it
 #Usage: mkcd [name]
 mkcd() {
 	mkd $1;

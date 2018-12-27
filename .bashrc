@@ -2,7 +2,7 @@
 
 #I'm certainly no PS1 expert, but this is the Manjaro Xfce default. It looks like [user@host dir]$
 if [[ ${EUID} == 0 ]] ; then
-	PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+	PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '	#This is supposed to be the root PS1, but I can't get it to start...
 else
 	PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 fi
@@ -35,6 +35,7 @@ alias xq='xbps-query'
 alias sta='git status'
 alias dif='git diff'
 alias log='git log'
+alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'	#Print CPU temperature in thousandths of degrees Celsius
 alias please='sudo $(history -p !!)'					#Automagic sudo of previous line. Why does it work? I dunno
 
 #Functions for easier git maneuvers
@@ -59,4 +60,4 @@ mkcd() {
 }
 
 #Don't ask why this is here. Just ignore it
-#alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/newfile'
+#alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/'

@@ -6,11 +6,16 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 #Force cursor to use the Paper theme, no matter what
-#The Xresources line also helps
 export XCURSOR_THEME=Paper
 
-#Load bashrc
+#Set monitor to 1080p120
+#I could go with 1080p144, but most graphically-intesive games seem to sit around 120FPS
+#For whatever reason, xrandr says my monitor does 119.98 instead of 120...
+xrandr -s 1920x1080 -r 120
+
+#Grab bashrc
 [ -f $HOME/.bashrc ] && . "$HOME/.bashrc"
 
-#Load i3, if it's not running
+#Start i3 if it's not running
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
+

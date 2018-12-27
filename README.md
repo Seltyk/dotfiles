@@ -1,7 +1,7 @@
 # wundrweapon's dotfiles (and programs list)
-This repo effectively covers most (all?) of the configuration files on my Void system  
-In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)  
-Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)  
+This repo effectively covers most (all?) of the configuration files on my Void system
+In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)
+Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)
 Oh, and by the way, this is *exclusively* referring to [my Void gaming rig, nicknamed HeliX](https://pcpartpicker.com/user/wundrweapon/saved/363WD3); my Dell Inspiron 15 laptop, Alienware Alpha, and Moto g5+ have other mixtures of software that I'm simply ignoring here
 
 But first, before anyone asks, this is Public Domain for the sole and explicit reason that it makes no sense for me to *own* a preference of style...
@@ -37,11 +37,12 @@ But first, before anyone asks, this is Public Domain for the sole and explicit r
 
 ## Non critical stuff that I use
 * [Noto](https://www.google.com/get/noto/): good pan-Unicode font. I have some qualms with it, but the fact that it covers almost everything in Unicode means I don't have to fuss with fontconfig too much, and just one font can cover all my needs. However, I don't use the emoji
+* [Liberation](https://en.wikipedia.org/wiki/Liberation_fonts): because Noto's monospaced font can't handle a terminal
 * [Blobmoji](https://github.com/C1710/blobmoji): blobs were the better emoji and Google should be ashamed of themselves for ditching it
 * [scrot](https://en.wikipedia.org/wiki/Scrot): screenshot tool
 
 ## Nonfree programs I use
-I tend not to condone the use of proprietary and/or freedom-disrespecting software. Unfortunately, the industry standard is not caring about the end user. Google, Take-Two Interactive, and Paradox Interactive are infamous for this; Discord and Slack are *a bit* better about it; Steam and most game devs are considerably better about it. Still, nonfree is nonfree any way you slice it.  
+I tend not to condone the use of proprietary and/or freedom-disrespecting software. Unfortunately, the industry standard is not caring about the end user. Google, Take-Two Interactive, and Paradox Interactive are infamous for this; Discord and Slack are *a bit* better about it; Steam and most game devs are considerably better about it. Still, nonfree is nonfree any way you slice it.
 That all said, I'm not Luke Smith — I am a digital citizen. My life is centered around technology in almost every way (for better or for worse). Thus, I've allowed myself to use several nonfree programs. Here's the major two; links not provided so as not to promote nonfree software:
 
 * Steam: games library. For the sake of:
@@ -49,7 +50,7 @@ That all said, I'm not Luke Smith — I am a digital citizen. My life is centere
 * Discord: mass communication utility. The only xbps-src program I use
 
 ## Miscellaneous info, in Q&A format
-"What about media players?" I don't use any right now. I do, however, expect to start using [mpv](https://mpv.io/), [mpd](https://www.musicpd.org/), and [ncmpcpp](https://rybczak.net/ncmpcpp/) eventually  
-"No torrent client?" Honest question: what would I use that for? I don't pirate anything, I'm not trying out distros, and all the knowledge I want is online in non-torrent form  
-"Why Void?" Void is lightweight, is built from scratch, uses runit (and doesn't use systemd), uses LibreSSL rather than OpenSSL, and is cutting-edge rather than bleeding-edge. The only real drawback is that it is **not** easy to set up  
+"What about media players?" I don't use any right now. I do, however, expect to start using [mpv](https://mpv.io/), [mpd](https://www.musicpd.org/), and [ncmpcpp](https://rybczak.net/ncmpcpp/) eventually
+"No torrent client?" Honest question: what would I use that for? I don't pirate anything, I'm not trying out distros, and all the knowledge I want is online in non-torrent form
+"Why Void?" Void is lightweight, is built from scratch, uses runit (and doesn't use systemd), uses LibreSSL rather than OpenSSL, and is cutting-edge rather than bleeding-edge. The only real drawback is that it is **not** easy to set up
 "Why don't you use a mail client?" My laptop and phone are the only two devices I want to use when dealing with emails

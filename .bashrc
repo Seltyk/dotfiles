@@ -8,7 +8,7 @@ else
 fi
 
 #Infinite bash history file. I can always delete it to start from the bottom again. Which, honestly, I will do frequently
-HISTSIZE= HISTFILESIZE =
+HISTSIZE= HISTFILESIZE=
 
 #Shell options
 shopt -s expand_aliases	#When is alias is identified, replace it with its full value. This allows for stacking aliases (seen below)

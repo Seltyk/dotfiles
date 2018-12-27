@@ -6,4 +6,11 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 #Force cursor to use the Paper theme, no matter what
+#The Xresources line also helps
 export XCURSOR_THEME=Paper
+
+#Load bashrc
+[ -f $HOME/.bashrc ] && . "$HOME/.bashrc"
+
+#Load i3, if it's not running
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx

@@ -1,2 +1,5 @@
+Xcursor.theme: Paper
+
 *.alpha: 204
 *.color0: #1d2021
+*.font: Liberation Mono:pixelsize=16:antialias=true:autohint=true;

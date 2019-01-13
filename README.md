@@ -1,7 +1,7 @@
 # wundrweapon's dotfiles (and programs list)
 This repo effectively covers most (all?) of the configuration files on my Void system
-In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)
-Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)
+In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)  
+Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)  
 Oh, and by the way, this is *exclusively* referring to [my Void gaming rig, nicknamed HeliX](https://pcpartpicker.com/user/wundrweapon/saved/363WD3); my Dell Inspiron 15 laptop, Alienware Alpha, and Moto g5+ have other mixtures of software that I'm simply ignoring here
 
 But first, before anyone asks, this is Public Domain for the sole and explicit reason that it makes no sense for me to *own* a preference of style...

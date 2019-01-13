@@ -28,7 +28,8 @@ But first, before anyone asks, this is Public Domain for the sole and explicit r
   * [Video Speed Controller](https://addons.mozilla.org/en-US/firefox/addon/videospeed/): adjust playback speed of HTML5 videos
   * [Vim Vixen](https://addons.mozilla.org/en-US/firefox/addon/vim-vixen/): vim-like navigation
 * [OBS](https://obsproject.com/): livestreaming utility
-* [feh](https://feh.finalrewind.org/): image viewer and wallpaper setter
+* [feh](https://feh.finalrewind.org/): wallpaper setter
+* [sxiv](https://github.com/muennich/sxiv): image viewer
 
 ## Critical programs I don't use yet but will soon use
 * [kdenlive](https://kdenlive.org/): non-linear video editor

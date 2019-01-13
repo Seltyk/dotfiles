@@ -38,7 +38,7 @@ But first, before anyone asks, this is Public Domain for the sole and explicit r
 
 ## Non critical stuff that I use
 * [Noto](https://www.google.com/get/noto/): good pan-Unicode font. I have some qualms with it, but the fact that it covers almost everything in Unicode means I don't have to fuss with fontconfig too much, and just one font can cover all my needs. However, I don't use the emoji or the monospace
-* [Inconsolata](https://www.levien.com/type/myfonts/inconsolata.html): better monospace font than anything else I've seen
+* [Liberation](https://pagure.io/liberation-fonts): good monospaced font. Too bad I have to also have the not-so-monospaced parts...
 * [Blobmoji](https://github.com/C1710/blobmoji): blobs were the better emoji and Google should be ashamed of themselves for ditching it
 * [scrot](https://en.wikipedia.org/wiki/Scrot): screenshot tool
 

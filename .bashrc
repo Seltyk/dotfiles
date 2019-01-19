@@ -59,5 +59,12 @@ mkcd() {
 	cd $1;
 }
 
+#Update multilib and nonfree programs
+mlnf() {
+	xi void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree;
+	xi -Suv;
+	xr void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree;
+}
+
 #Don't ask why this is here. Just ignore it
 #alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/'

@@ -35,6 +35,7 @@ alias xq='xbps-query'
 alias sta='git status'
 alias dif='git diff'
 alias log='git log'
+alias ws='sudo wpa_supplicant'							#The program's name is too damn long...
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'	#Print CPU temperature in thousandths of degrees Celsius
 alias please='sudo $(history -p !!)'					#Automagic sudo of previous line. Why does it work? I dunno
 
@@ -59,11 +60,13 @@ mkcd() {
 	cd $1;
 }
 
-#Update multilib and nonfree programs
+#(Un)install multilib and nonfree repos
 mlnf() {
-	xi void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree;
-	xi -Suv;
-	xr void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree;
+	if [ -z $(xq -s void-repo-) ]; then
+		xi void-repo-{nonfree,multilib{,-nonfree}}
+	else
+		xr void-repo-{nonfree,multilib{,-nonfree}}
+	fi
 }
 
 #Don't ask why this is here. Just ignore it

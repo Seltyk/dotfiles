@@ -21,8 +21,9 @@ export EDITOR="$VISUAL"
 
 #Small, time-saving shortcuts in no particular order
 alias 'ls'='ls --color=auto --group-directories-first'	#Always use colors and list directories before files
-alias la='ls -Al'
-alias lA='ls -A'
+alias la='ls -A'
+alias lA='ls -Al'
+alias lal='lA'
 alias ll='ls -l'
 alias lb='lsblk -o name,size,fstype,mountpoint'
 alias 'grep'='grep --colour=auto'						#Always use colors
@@ -35,6 +36,8 @@ alias xq='xbps-query'
 alias sta='git status'
 alias dif='git diff'
 alias log='git log'
+alias pull='git pull'
+alias push='git push'
 alias ws='sudo wpa_supplicant'							#The program's name is too damn long...
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'	#Print CPU temperature in thousandths of degrees Celsius
 alias please='sudo $(history -p !!)'					#Automagic sudo of previous line. Why does it work? I dunno
@@ -70,4 +73,4 @@ mlnf() {
 }
 
 #Don't ask why this is here. Just ignore it
-#alias rand='cp $(find . -type f | shuf -n 1) ~/Desktop/'
+#alias rand='cp $(find . -type f | shuf -n 1) ~/randfile/'

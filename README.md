@@ -2,9 +2,9 @@
 This repo effectively covers most (all?) of the configuration files on my Void system  
 In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)  
 Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)  
-Oh, and by the way, this is *exclusively* referring to [my Void gaming rig, nicknamed HeliX](https://pcpartpicker.com/user/wundrweapon/saved/363WD3); my Dell Inspiron 15 laptop, Alienware Alpha, and Moto g5+ have other mixtures of software that I'm simply ignoring here
+Oh, and by the way, this is *exclusively* referring to [my Void gaming rig, nicknamed HeliX](https://pcpartpicker.com/b/4j7WGX). My Dell Inspiron 15 laptop, Alienware Alpha, and Moto g5+ have other mixtures of software that I'm simply ignoring here
 
-But first, before anyone asks, this is Public Domain for the sole and explicit reason that it makes no sense for me to *own* a preference of style. That said, more and more of this repo is beginning to contain actual script, so I might start looking towards GPL v3 or something like that...
+But first, before anyone asks, this is Public Domain for the sole and explicit reason that it makes no sense for me to *own* a preference of style. That said, more and more of this repo is beginning to contain actual script, so I will likely switch to MIT soon...
 
 ## Critical programs I use
 ### Programs found here
@@ -30,11 +30,12 @@ But first, before anyone asks, this is Public Domain for the sole and explicit r
 * [OBS](https://obsproject.com/): livestreaming utility
 * [feh](https://feh.finalrewind.org/): wallpaper setter
 * [sxiv](https://github.com/muennich/sxiv): image viewer
+* [ranger](https://ranger.github.io/): stronk yet minimalist terminal-based file management
+* [mpv](https://mpv.io/): fast, lightweight video player
 
 ## Critical programs I don't use yet but will soon use
-* [kdenlive](https://kdenlive.org/): non-linear video editor
+* [Shotcut](https://shotcut.org/): non-linear video editor
 * [Polybar](https://polybar.github.io/): slick status bar
-* [ranger](https://ranger.github.io/): stronk yet minimalist terminal-based file management
 
 ## Non critical stuff that I use
 * [Noto](https://www.google.com/get/noto/): good pan-Unicode font. I have some qualms with it, but the fact that it covers almost everything in Unicode means I don't have to fuss with fontconfig too much, and just one font can cover all my needs. However, I don't use the emoji or the monospace
@@ -51,7 +52,7 @@ That all said, I'm not Luke Smith — I am a digital citizen. My life is centere
 * Discord: mass communication utility. The only xbps-src program I use
 
 ## Miscellaneous info, in Q&A format
-"What about media players?" I don't use any right now. I do, however, expect to start using [mpv](https://mpv.io/), [mpd](https://www.musicpd.org/), and [ncmpcpp](https://rybczak.net/ncmpcpp/) eventually  
+"What about music players?" I don't use any right now. I do, however, expect to start using [mpd](https://www.musicpd.org/) and maybe [ncmpcpp](https://rybczak.net/ncmpcpp/) eventually  
 "No torrent client?" Honest question: what would I use that for? I don't pirate anything, I'm not trying out distros, and all the knowledge I want is online in non-torrent form  
 "Why Void?" Void is lightweight, is built from scratch, uses runit (and doesn't use systemd), uses LibreSSL rather than OpenSSL, and is cutting-edge rather than bleeding-edge. The only real drawback is that it is **not** easy to set up  
 "Why don't you use a mail client?" My laptop and phone are the only two devices I want to use when dealing with emails

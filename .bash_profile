@@ -6,6 +6,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
+#Add my launcher scripts and AdoptOpenJDK 8u212-b03 to the PATH
+export PATH="$PATH:$HOME/Scripts:$HOME/OpenJDK/8u212-b03/bin"
+
 #Grab bashrc stuff
 [ -f $HOME/.bashrc ] && . "$HOME/.bashrc"
 

@@ -20,16 +20,16 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 #Small, time-saving shortcuts in no particular order
-alias 'ls'='ls --color=auto --group-directories-first'	#Always use colors and list directories before files
+alias ls='ls --color=auto --group-directories-first'	#Always use colors and list directories before files
 alias la='ls -A'
 alias lA='ls -Al'
-alias lal='lA'
+alias lal='ls -Al'
 alias ll='ls -l'
 alias lb='lsblk -o name,size,fstype,mountpoint'
-alias 'grep'='grep --colour=auto'						#Always use colors
+alias grep='grep --colour=auto'							#Always use colors
 alias mkd='mkdir -pv'									#The p option means to make any parent directories if nonexistent (helpful for quickly generating a tree), and the v option gives a verbose response (just in case something goes wrong)
-alias 'cp'="cp -i"										#Confirm before overwriting something
-alias 'free'='free -m'									#Show sizes in MiB
+alias cp="cp -i"										#Confirm before overwriting something
+alias free='free -h'									#Show sizes in MiB
 alias xi='sudo xbps-install'
 alias xr='sudo xbps-remove'
 alias xq='xbps-query'
@@ -57,7 +57,7 @@ acpp() {
 }
 
 #Make a directory and enter it
-#Usage: mkcd [name]
+#Usage: mkcd <name>
 mkcd() {
 	mkd $1;
 	cd $1;

@@ -1,5 +1,14 @@
+!Use Paper for my cursor (it is my theme all-around)
 Xcursor.theme: Paper
 
-*.alpha: 204
+!Alpha reconfiguration disabled because my setup is opaque and my terminal is set to the 80% I want anyways. If I enable this, the color premultiplier will destroy my color scheme
+*.alpha: .8
+
+!Use the ultradark/hard-contrast theme
 *.color0: #1d2021
+
+!The blue cursor is ugly, but a dimmed green is not actually that bad
+*.color258: #00bb00
+
+!Gotta use a font that cooperates while looking nice
 *.font: Liberation Mono:pixelsize=16:antialias=true:autohint=true;

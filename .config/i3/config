@@ -193,7 +193,7 @@ bar {
 }
 
 # Set wallpaper to cool-looking Void thingy, prepare fcitx, pool .Xresources, and set menu as compose
-exec_always --no-startup-id feh --bg-fill /home/void/Downloads/voidpape.png
+exec_always --no-startup-id feh --bg-fill /home/void/Pictures/Papes/voidpape.png
 exec_always --no-startup-id fcitx
 exec_always --no-startup-id xrdb /home/void/.Xresources
 exec_always --no-startup-id setxkbmap -option compose:menu

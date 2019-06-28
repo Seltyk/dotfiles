@@ -210,5 +210,5 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Custom shortcuts
-bindsym --release Ctrl+Shift+4 exec --no-startup-id scrot -msz -d .1 "%Y%m%d-%H%M%S.png" -e 'mv $f /home/void/Pictures/Scrots'
-bindsym --release Ctrl+Shift+5 exec --no-startup-id scrot -mz -d .1 "%Y%m%d-%H%M%S.png" -e 'mv $f /home/void/Pictures/Scrots'
+bindsym --release Ctrl+Shift+4 exec --no-startup-id scrot -msz -d 0.1 "%Y%m%d-%H%M%S.png" -e 'mv $f /home/void/Pictures/Scrots'
+bindsym --release Ctrl+Shift+5 exec --no-startup-id scrot -mz -d 0.1 "%Y%m%d-%H%M%S.png" -e 'mv $f /home/void/Pictures/Scrots'

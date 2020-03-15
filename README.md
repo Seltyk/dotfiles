@@ -1,4 +1,7 @@
 # wundrweapon's dotfiles (and programs list)
+
+*2020-03-15: This readme is more or less out of date. I'll refactor it sooner or later.*
+
 This repo effectively covers most (all?) of the configuration files on my Void system  
 In this document you will find a rundown of these files and the tools that I use (some of which needn't have any dotfiles)  
 Some of the configuration here (particularly with vimrc) is inspired by [Luke Smith's dotfiles](https://github.com/LukeSmithxyz/voidrice)  

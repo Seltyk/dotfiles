@@ -28,7 +28,7 @@ alias ll='ls -l'
 alias lb='lsblk -o name,size,fstype,mountpoint'
 alias grep='grep --colour=auto'							#Always use colors
 alias mkd='mkdir -pv'
-alias cp="cp -i"										#Confirm before overwriting something
+alias cp='cp -i'										#Confirm before overwriting something
 alias free='free -h'									#Show sizes in MiB
 alias xi='sudo xbps-install'
 alias xr='sudo xbps-remove'
@@ -42,6 +42,8 @@ alias ws='sudo wpa_supplicant'							#The program's name is too damn long...
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'	#Print CPU temperature in thousandths of degrees Celsius
 alias please='sudo $(history -p !!)'					#Automagic sudo of previous line. Why does it work? I dunno
 alias pag='ps ax | grep -i'								#One-token "find the fucked process"
+#alias devs="grep -P '^[NH]: ' /proc/bus/input/devices | paste - -"
+alias pav='pavucontrol'
 
 #Functions for easier git maneuvers
 acp() {

@@ -10,6 +10,9 @@ syntax on												"Enable syntax highlighting
 set number												"Enable line numbers
 set encoding=utf-8										"Use UTF-8 encoding
 
+"Call me out on line 120
+set cc=121
+
 "Enable autocomplete
 set wildmode=longest,list,full
 

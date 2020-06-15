@@ -206,6 +206,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_out
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_08_00.1.hdmi-stereo-extra4 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_08_00.1.hdmi-stereo-extra4 toggle
 
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_0a_00.3.analog-stereo +5%
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_0a_00.3.analog-stereo -5%
+bindsym Shift+XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_0a_00.3.analog-stereo toggle
+
 # Media player controls
 #bindsym XF86AudioPlay exec --no-startup-id playerctl play		(not gonna fly)
 #bindsym XF86AudioPause exec --no-startup-id playerctl pause	(not gonna fly)

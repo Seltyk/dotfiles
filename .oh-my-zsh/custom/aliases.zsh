@@ -7,6 +7,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias la='ls -A'
 alias lA='ls -Alh'
 alias ll='ls -lh'
+alias lt='lA -t'
 alias lb='lsblk -o name,size,fstype,mountpoint'
 
 alias mv='mv -i'
@@ -14,7 +15,6 @@ alias cp='cp -i'
 
 alias grep='grep --color=auto'
 alias mkd='mkdir -pv'
-alias cp='cp -i'
 alias free='free -h'
 
 alias xi='sudo xbps-install'
@@ -31,7 +31,7 @@ alias ws='sudo wpa_supplicant'
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'
 alias please='sudo $(history -p !!)'
 alias pag='ps ax | grep -i'
-alias pav='pavucontrol'
+alias lua='lua5.3'
 
 alias rec='ffmpeg -f alsa -ar 48000 -ac 1 -i'
 

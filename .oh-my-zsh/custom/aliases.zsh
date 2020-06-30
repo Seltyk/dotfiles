@@ -29,9 +29,10 @@ alias push='git push'
 
 alias ws='sudo wpa_supplicant'
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'
+alias ccat='highlight -O xterm256'
 alias please='sudo $(history -p !!)'
 alias pag='ps ax | grep -i'
-alias lua='lua5.3'
+alias lua='lua5.4'
 
 alias rec='ffmpeg -f alsa -ar 48000 -ac 1 -i'
 

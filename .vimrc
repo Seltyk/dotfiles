@@ -4,6 +4,7 @@
 
 "Basics
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4	"Destupidize tabbing
+set ai si												"Auto-indent
 set nocompatible										"Disable vi compatibility; makes vim more stronk
 filetype plugin on										"Enable filetype detection
 syntax on												"Enable syntax highlighting
@@ -16,8 +17,8 @@ set cc=121
 "Enable autocomplete
 set wildmode=longest,list,full
 
-"Disable autocomment newline (was this ever an issue?)
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"Enable text/comment formatting
+autocmd FileType * setlocal fo+=t fo+=c fo+=r fo-=o
 
 "Split on bottom and right, like i3 and any sane person
 set splitbelow splitright

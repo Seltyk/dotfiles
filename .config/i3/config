@@ -201,6 +201,9 @@ exec_always --no-startup-id fcitx
 exec_always --no-startup-id xrdb /home/void/.Xresources
 exec_always --no-startup-id setxkbmap -option compose:menu
 
+# Fix Origin (for Titanfall 2 and Dead Space)
+for_window [instance="origin.exe"] floating enable
+
 # PulseAudio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_08_00.1.hdmi-stereo-extra4 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_08_00.1.hdmi-stereo-extra4 -5%

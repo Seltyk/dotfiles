@@ -31,11 +31,12 @@ alias ws='sudo wpa_supplicant'
 alias ctemp='cat /sys/class/thermal/thermal_zone0/temp'
 alias ccat='highlight -O xterm256'
 alias please='sudo $(history -p !!)'
-alias pag='ps ax | grep -i'
+alias pag='ps ax | grep -iP'
 alias lua='lua5.4'
+alias gpg='gpg2'
 
 alias rec='ffmpeg -f alsa -ar 48000 -ac 1 -i'
+alias acp='git add . && git commit -S && git push'
+alias acpp='git add . && git commit -S && git pull -r && git push'
 
-function acp() { git add . && git commit && git push }
-function acpp() { git add . && git commit && git pull && git push }
-function mkcd() { mkd $1 && cd $1 }
+function mkcd() { mkdir -pv $1 && cd $1 }

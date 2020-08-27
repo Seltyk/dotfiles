@@ -1,5 +1,8 @@
 # wundrweapon's dotfiles (and programs list)
 
+UPDATE 2020-08-27: I am adding my laptop to this frenzy, and have separated the two as branches! This readme will,
+therefore, need significant reworking when that is done. For now, consider this valid for the `void-pc` branch
+
 This repo effectively covers most (all?) of the configuration files on my Void System  
 In this document you will find a rundown of these files and the tools that I use (some of which needn't have any
 dotfiles)  

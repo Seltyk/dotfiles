@@ -1,5 +1,7 @@
 # wundrweapon's dotfiles (and programs list)
 
+UPDATE 2021-01-24: I probably should have said this a long while ago, but I've [moved this repo to GitLab](https://gitlab.com/wundrweapon/dotfiles/)
+
 UPDATE 2020-08-27: I am adding my laptop to this frenzy, and have separated the two as branches! This readme will,
 therefore, need significant reworking when that is done. For now, consider this valid for the `void-pc` branch
 
